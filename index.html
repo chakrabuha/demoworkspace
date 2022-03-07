@@ -6,17 +6,19 @@
 		<style type="text/css">
 			.container-md{
 				margin-top: 150px;
+				margin-bottom: 50px;
 				background-position: center;
-				width: 1200px;
-				height: 600px;
-				border: 9px solid bisque;
+				
+				border: 9px solid rosybrown;
 				background-color: lavenderblush;
 			}
 			.lead{
-				padding-top: 200px;
+				padding-top: 50px;
+				padding-bottom: 50px;
 				text-align: center;
 				font-family: sans-serif;
-				font-size: 60px;
+				font-size: 50px;
+				color: cornflowerblue;
 			}
 		</style>
 		<script type="text/javascript">
@@ -30,13 +32,23 @@
 
 			});
 			function AutoRefresh(){
-				setTimeout("location.reload(true);",5000);
+				setTimeout("location.reload(true);",8000);
+			}
+			function Textcolor(){
+				var b= document.getElementById("i1");
+				b.style.color="yellowgreen";
+				b.style.fontSize="60px";
+			}
+			function BacktoPrev(){
+				var b=document.getElementById("i1").style;
+				b.color="cornflowerblue";
+				b.fontSize="40px";
 			}
 		</script>
 	</head>
 	<body onload="javascript:AutoRefresh();">
 		<div class="container-md">
-			<p class="lead"></p>
+			<p class="lead" id="i1" onmouseover="javascript:Textcolor();" onmouseout="javascript:BacktoPrev();"></p>
 		</div>
 	</body>
 </html>
